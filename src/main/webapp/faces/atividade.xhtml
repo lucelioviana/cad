@@ -1,0 +1,40 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.org/ui"
+                template="../templates/template.xhtml"
+                xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+    <ui:define name="title">
+        <h:outputText>Atividade</h:outputText>
+    </ui:define>
+
+    <ui:define name="toolbar">
+        <p:toolbar>
+            <p:toolbarGroup align="left">
+                <p:commandButton label="Novo" value="Novo" icon="ui-icon-plus" ></p:commandButton>
+            </p:toolbarGroup>
+        </p:toolbar>
+    </ui:define>
+    <ui:define name="body">
+        <p:dataTable id="tabela" var="pojo" value="#{atividadeUI.lista}">
+            <p:column headerText="Id">
+                <h:outputText value="#{pojo.id}" />
+            </p:column>
+            <p:column headerText="Nome">
+                <h:outputText value="#{pojo.nome}" /> 
+            </p:column>
+
+            <p:column style="width:1%">
+                <p:commandLink title="Editar">
+                    <p:graphicImage value="./resources/imagens/edit.png" />
+                </p:commandLink>
+            </p:column>
+            <p:column style="width:1%">
+                <p:commandLink title="Excluir">
+                    <p:graphicImage value="./resources/imagens/delete.png" />
+                </p:commandLink>
+            </p:column> 
+        </p:dataTable>
+    </ui:define>
+</ui:composition>

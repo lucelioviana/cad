@@ -1,0 +1,52 @@
+<?xml version='1.0' encoding='UTF-8' ?> 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title><ui:insert name="title"></ui:insert></title>
+        <style>
+            .ui-widget,
+            .ui-widget .ui-widget {
+                font-size: 12px !important;
+            }
+        </style> 
+    </h:head>
+    <h:body>
+        <div>
+            <h:form>
+                <div>
+                    <p:graphicImage url="./resources/imagens/logo.gif"></p:graphicImage>
+                    <p:menubar>
+                        <p:submenu label="Cadastro"> 
+                            <p:menuitem value="Atividades" url="#" />
+                            <p:menuitem value="Horas" url="#" />
+                        </p:submenu>
+                        <p:submenu label="Relatório">
+                            <p:menuitem value="Atividades" url="#"/>
+                            <p:menuitem value="Horas" url="#"/>
+                        </p:submenu>
+                    </p:menubar>
+                </div>
+                <div>
+                    <h1>
+                        <ui:insert name="title2"></ui:insert>
+                    </h1>
+                </div>
+                <br/>    
+                <div>
+                    <ui:insert name="toolbar"></ui:insert>
+                </div>
+                <div>
+                    <ui:insert name="body"></ui:insert>
+                </div>
+                <br/>
+                <div>
+                    <h:outputText value="Produzido por Petito"></h:outputText>
+                </div>            
+            </h:form>
+        </div>
+    </h:body>
+</html>
